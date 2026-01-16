@@ -3,7 +3,8 @@
 #include <stdlib.h>
 #include <cstring>
 
-OpenRelTable::OpenRelTable(){
+OpenRelTable::OpenRelTable()
+{
 
     // initialize relCache and attrCache with nullptr
     for(int i=0;i<MAX_OPEN;i++){
