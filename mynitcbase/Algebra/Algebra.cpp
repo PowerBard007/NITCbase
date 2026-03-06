@@ -33,7 +33,7 @@ bool isNumber(char *str)
 
 int Algebra::select(char srcRel[ATTR_SIZE], char targetRel[ATTR_SIZE], char attr[ATTR_SIZE], int op, char strVal[ATTR_SIZE])
 {
-    int srcRelId = OpenRelTable::getRelId(srcRel); // we'll implement this later
+    int srcRelId = OpenRelTable::getRelId(srcRel);
     if (srcRelId == E_RELNOTOPEN)
     {
         return E_RELNOTOPEN;
