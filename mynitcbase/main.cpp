@@ -2,12 +2,17 @@
 #include "Cache/OpenRelTable.h"
 #include "Disk_Class/Disk.h"
 #include "FrontendInterface/FrontendInterface.h"
+#include <iostream>
+#include <stdlib.h>
+#include <vector>
+#include <string.h>
 
-int main(int argc, char *argv[]) {
-  /* Initialize the Run Copy of Disk */
+using namespace std;
+int main(int argc, char *argv[])
+{
   Disk disk_run;
-  // StaticBuffer buffer;
-  // OpenRelTable cache;
+  StaticBuffer buffer;
+  OpenRelTable cache;
 
   return FrontendInterface::handleFrontend(argc, argv);
 }
