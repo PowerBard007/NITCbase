@@ -312,7 +312,7 @@ int RecBuffer::setSlotMap(unsigned char *slotMap)
     return SUCCESS;
 }
 
-int BlockBuffer::getFreeBlock(char blockType)
+int BlockBuffer::getFreeBlock(int blockType)
 {
     // TODO: Cross check whether blockType is char or int
     //  iterate through the StaticBuffer::blockAllocMap and find the block number
