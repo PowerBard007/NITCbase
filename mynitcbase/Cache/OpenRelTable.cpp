@@ -100,14 +100,14 @@ int OpenRelTable::getFreeOpenRelTableEntry()
     return E_CACHEFULL;
     // if found return the relation id, else return E_CACHEFULL.
 }
-
+//returns the relid from the table meta info
 int OpenRelTable::getRelId(char relName[ATTR_SIZE])
 {
-    for (int i = 0; i < MAX_OPEN; i++)
+    for(int i = 0; i < MAX_OPEN; i++)
     {
-        if (tableMetaInfo[i].free)
+        if(tableMetaInfo[i].free)
             continue;
-        if (strcmp(tableMetaInfo[i].relName, relName) == 0)
+        if(strcmp(tableMetaInfo[i].relName, relName) == 0)
             return i;
     }
 

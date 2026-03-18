@@ -194,19 +194,6 @@ int RecBuffer::setRecord(union Attribute *rec, int slotNum)
     return SUCCESS;
 }
 
-/*
-Used to load a block to the buffer and get a pointer to it.
-NOTE: this function expects the caller to allocate memory for the argument
-*/
-/* NOTE: This function will NOT check if the block has been initialised as a
-   record or an index block. It will copy whatever content is there in that
-   disk block to the buffer.
-   Also ensure that all the methods accessing and updating the block's data
-   should call the loadBlockAndGetBufferPtr() function before the access or
-   update is done. This is because the block might not be present in the
-   buffer due to LRU buffer replacement. So, it will need to be bought back
-   to the buffer before any operations can be done.
- */
 int BlockBuffer::loadBlockAndGetBufferPtr(unsigned char **buffPtr)
 {
     /* check whether the block is already present in the buffer
