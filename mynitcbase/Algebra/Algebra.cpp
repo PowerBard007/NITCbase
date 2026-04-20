@@ -5,6 +5,7 @@
 #include <cstdlib>
 
 bool isNumber(char *str);
+extern int numComparisons;
 
 /*  used to select all the records that satisfy a condition.
     the arguments of the function are
@@ -91,6 +92,8 @@ int Algebra::select(char srcRel[ATTR_SIZE], char targetRel[ATTR_SIZE], char attr
             return ret;
         }
     }
+    printf("Number of comparisons: %d\n", numComparisons);
+numComparisons = 0;
     Schema::closeRel(targetRel);
     // Schema::deleteRel(targetRel);
     return SUCCESS;

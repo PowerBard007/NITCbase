@@ -1,6 +1,7 @@
 #include "BlockAccess.h"
 
 #include <cstring>
+int numComparisons = 0;
 
 
 RecId BlockAccess::linearSearch(int relId, char attrName[ATTR_SIZE], union Attribute attrVal, int op){
@@ -83,6 +84,7 @@ RecId BlockAccess::linearSearch(int relId, char attrName[ATTR_SIZE], union Attri
 
         Attribute currentAttrVal = record[attrCatEntry.offset];
         
+        numComparisons++;
         // store the difference b/w the attributes.
         int cmpVal = compareAttrs(currentAttrVal, attrVal, attrCatEntry.attrType);
 
