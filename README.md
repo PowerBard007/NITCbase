@@ -1,12 +1,17 @@
-Workflow for running the container
-POWERSHELL docker start nitcbase
-VS Code Ctrl + Shift + P
-Dev Containers: Attach to Running Container → nitcbase
+Q1 
+fdisk 
+exit
 
+run s11.txt 
+exit 
 
+schema S11_Students
+export S11_c_Students c_students.csv
+export S11_9_Students 9_students.csv
 
-Workflow for updating:
+Q2
 
-git add .
-git commit -m ""
-git push
+create index on RELATIONCAT.RelName
+drop index on S11_Students.name
+open table S11_Students    
+drop index on S11_Students.name
