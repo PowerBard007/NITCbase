@@ -759,7 +759,7 @@ int BPlusTree::splitInternal(int intBlockNum, InternalEntry internalEntries[])
         leftBlock.setEntry(&internalEntries[i], i);
     }
 
-    for (int i = MIDDLE_INDEX_INTERNAL + 1; i <= 100; i++)
+    for (int i = MIDDLE_INDEX_INTERNAL + 1; i <= MAX_KEYS_INTERNAL; i++)
     {
         rightBlock.setEntry(&internalEntries[i], i - MIDDLE_INDEX_INTERNAL - 1);
     }
