@@ -2,15 +2,9 @@
 #include "Cache/OpenRelTable.h"
 #include "Disk_Class/Disk.h"
 #include "FrontendInterface/FrontendInterface.h"
-#include <iostream>
-#include <stdlib.h>
-#include <vector>
-#include <string.h>
-
 using namespace std;
 
-int main(int argc, char *argv[])
-{
+int main(int argc, char *argv[]) {
   Disk disk_run;
   StaticBuffer buffer;
   OpenRelTable cache;
